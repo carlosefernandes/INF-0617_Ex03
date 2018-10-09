@@ -1,1 +1,6 @@
 Code responsible to run Map-Reduce in order to compute votes in São Paulo state in 2014 elections.
+
+In order to run in master and slave haddops, execute in master:
+
+$HADOOP_HOME/bin/hadoop  jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-3.0.0.jar  -input /tmp/data/votos/votacao_secao_2014_SP.txt -output /tmp/data/votes_count_out -mapper "python /tmp/data/votos/map.py" -reducer "python /tmp/data/votos/reduce.py"
+
