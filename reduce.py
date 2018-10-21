@@ -3,8 +3,8 @@ import sys
 votes_dict = {}
 
 for line in sys.stdin:
-	num, count = line.split(':')
 	try:
+		num, count = line.split(':')
 		count = int(count)
 	except ValueError:
 		continue
